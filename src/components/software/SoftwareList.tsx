@@ -68,17 +68,17 @@ export const SoftwareList: React.FC = () => {
   };
 
   return (
-    <div className="max-w-[1000px] mx-auto px-16 py-6">
-      <div className="flex justify-end items-center mb-6">
+    <div className="max-w-[1000px] mx-auto px-4 md:px-16 py-4 md:py-6">
+      <div className="flex justify-end items-center mb-4 md:mb-6">
         <button
           onClick={handleAddNew}
-          className="text-white rounded text-sm font-medium leading-[18.2px] cursor-pointer bg-[#6B047C] px-4 py-2 hover:bg-[#5A036A] transition-all duration-200 hover:scale-105"
+          className="text-white rounded text-sm font-medium leading-[18.2px] cursor-pointer bg-[#6B047C] px-4 py-2 hover:bg-[#5A036A] transition-all duration-200 hover:scale-105 w-full md:w-auto"
         >
           Add a new software
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {softwareList.map((item) => (
           <SoftwareCard
             key={item.id}
@@ -90,7 +90,7 @@ export const SoftwareList: React.FC = () => {
       </div>
 
       {softwareList.length > 0 && (
-        <div className="mt-8">
+        <div className="mt-6 md:mt-8">
           <Pagination
             currentPage={currentPage}
             totalPages={6}
